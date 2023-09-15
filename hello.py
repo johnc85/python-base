@@ -19,7 +19,7 @@ Execução:
 """
 
 
-__version__ = "0.0.1"
+__version__ = "0.1.2"
 __author__ = "John Caracho"
 __license__ = "Unlicense"
 
@@ -27,20 +27,16 @@ import os  #modulo tem a funcionalidade de ler variaveis de ambiente do sistema 
 # Dunder significa indentificado __ (dois underline)
 
 
-current_language = os.getenv("LANG", "en_US" )[:5] # após a virgula significa que o valor padrão será en_US e pega os 5 primeiro caracteres
+current_language = os.getenv("LANG", "en_US")[:5] # após a virgula significa que o valor padrão será en_US e pega os 5 primeiro caracteres
 
-msg = "Hello, World!"  # test-ignore
+msg = {
+    "pt_BR": "Olá', Mundo!",
+    "it_IT": "Ciao, Mondo!",
+    "es_ES": "Hola Mundo!",
+    "fr_FR": "Bonjour le monde!",
+    "en_US": "Hello, World"
+}
 
-if current_language == "pt_BR":
-    msg = "Olá, Mundo!"
-elif current_language == "it_IT":
-   msg = "Ciao, Mondo!"   
-elif current_language == "es_ES":
-   msg = "Hola Mundo!" 
-elif current_language == "fr_FR":
-   msg = "Bonjour le monde!"
- 
-
-
-print(msg)
+# O (1) velocidade constante
+print(msg[current_language])
 
