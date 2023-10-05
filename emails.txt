@@ -1,0 +1,4 @@
+Maria,maria@gmail.com
+João,joa@gmail.com
+Bruno,bruno@gmail.com
+sergio,sergio@hotmail.com
